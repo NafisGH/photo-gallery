@@ -1,0 +1,39 @@
+.photo-gallery {
+  padding: 20px;
+  text-align: center;
+}
+
+.photo-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.photo-item {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  height: 300px;
+}
+
+.photo-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.photo-image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Дополнительные стили для модального окна */
+.Modal__Overlay {
+  background: rgba(0, 0, 0, 0.75);
+}

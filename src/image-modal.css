@@ -1,0 +1,83 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px; /* Фиксируем максимальную ширину модального окна */
+    max-height: 80vh;
+    background: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .modal-header {
+     display: flex;
+    padding-bottom: 10px;
+  }
+  
+  .photo-index {
+    flex: 1;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .nav-button, .close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.5s;
+  }
+  .nav-button:hover, .close-button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+  
+  .nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .modal-body {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ограничиваем выход изображения за пределы контейнера */
+  }
+  
+  .modal-image {
+    max-width: 100%;
+    max-height: 60vh;
+    object-fit: cover;
+    border-radius: 8px;
+    background: white;
+    padding: 10px; /* Отступы вокруг изображения */
+  }
+  
